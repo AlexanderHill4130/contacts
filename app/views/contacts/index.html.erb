@@ -2,8 +2,8 @@
 
 <h1>Contacts</h1>
 
-<table class="table table-striped-columns table-sm">
-  <thead>
+<table class="table table-sm table-bordered table-hover">
+  <thead class="table-dark">
     <tr>
       <th>First name</th>
       <th>Last name</th>
@@ -32,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Contact', new_contact_path %>
+<%= link_to 'New Contact', new_contact_path, class: "btn btn-secondary" %>
