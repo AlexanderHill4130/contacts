@@ -4,28 +4,29 @@
 <table class="table table-sm table-bordered table-hover">
   <thead class="table-dark">
     <tr>
-      <th>First name</th>
-      <th>Last name</th>
+      <th>Name</th>
       <th>Email</th>
       <th>Phone</th>
       <th>Twitter</th>
-      <th colspan="3"></th>
+<!--       <th>User Id</th> -->
+<!--       <th colspan="1"></th> -->
     </tr>
   </thead>
 
   <tbody>
     <% @contacts.each do |contact| %>
+      <% if contact.user == current_user -%>
       <tr>
-        <td><%= contact.first_name %></td>
-        <td><%= contact.last_name %></td>
+        <td><%= link_to contact.first_name + ' ' + contact.last_name , contact %></td>
         <td><%= contact.email %></td>
         <td><%= contact.phone %></td>
         <td><%= contact.twitter %></td>
-        <td><%= link_to 'Show', contact %></td>
-        <td><%= link_to 'Edit', edit_contact_path(contact) %></td>
-        <td><%= link_to 'Destroy', contact, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+<!--         <td><%= contact.user_id %></td> -->
+<!--         <td><%= link_to 'Edit', edit_contact_path(contact) %></td> -->
+<!--         <td><%= link_to 'Delete', contact, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
       </tr>
-    <% end %>
+      <% end -%>
+    <% end -%>
   </tbody>
 </table>
 

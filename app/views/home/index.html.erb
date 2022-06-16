@@ -1,2 +1,9 @@
 <h1>Home</h1>
-<p>Home Page</p>
+<p>Welcome to Contacts</p>
+
+
+<% if user_signed_in? -%>
+  <%= link_to "View Your contacts...", contacts_path, class: "btn btn-secondary btn-sm" %>
+<% else %>
+    <%= link_to "Log in to view contacts", new_user_session_path, class: "btn btn-secondary btn-sm" %>
+<% end %>
