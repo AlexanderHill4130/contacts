@@ -1,7 +1,7 @@
 
 
 
-<div style="margin-top:55px; padding-top:55px;" class="container-fluid text-sm-left bg-light p-5 bg-dark text-white "> <!-- bg-light is background color & p-5 is padding -->
+<div style="margin-top:55px; padding-top:55px;" class="container-fluid text-sm-left bg-light p-5 border text-dark "> <!-- bg-light is background color & p-5 is padding -->
     <h1 class="display-2">
       <%= @contact.first_name %>
       <%= @contact.last_name %>
@@ -13,7 +13,8 @@
 
     </p>
 
-    <%= link_to 'Edit', edit_contact_path(@contact), class: "btn btn-secondary btn-light" %>
-    <%= link_to 'Back', contacts_path, class: "btn btn-secondary" %>
-    <%= link_to 'Delete', @contact, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger float-end" %>
+    <%= link_to 'Edit', edit_contact_path(@contact), class: "btn btn-secondary btn-light border" %>
+    <%= link_to 'Back', contacts_path, class: "btn btn-secondary border" %>
+    <%= link_to 'Delete', @contact, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger border float-end" %>
 </div>
+

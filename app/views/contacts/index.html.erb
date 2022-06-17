@@ -1,35 +1,40 @@
+<div class="card">
+  <div class="card-header">
+    <h4>Contacts</h4>
+  </div>
+  <div class="card-body">
+    <table class="table table-sm table-bordered table-hover">
+      <thead class="table-dark">
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Twitter</th>
+    <!--       <th>User Id</th> -->
+    <!--       <th colspan="1"></th> -->
+        </tr>
+      </thead>
 
-<h1>Contacts</h1>
-
-<table class="table table-sm table-bordered table-hover">
-  <thead class="table-dark">
-    <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Phone</th>
-      <th>Twitter</th>
-<!--       <th>User Id</th> -->
-<!--       <th colspan="1"></th> -->
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @contacts.each do |contact| %>
-      <% if contact.user == current_user -%>
-      <tr>
-        <td><%= link_to contact.first_name + ' ' + contact.last_name , contact %></td>
-        <td><%= contact.email %></td>
-        <td><%= contact.phone %></td>
-        <td><%= contact.twitter %></td>
-<!--         <td><%= contact.user_id %></td> -->
-<!--         <td><%= link_to 'Edit', edit_contact_path(contact) %></td> -->
-<!--         <td><%= link_to 'Delete', contact, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
-      </tr>
-      <% end -%>
-    <% end -%>
-  </tbody>
-</table>
+      <tbody>
+        <% @contacts.each do |contact| %>
+          <% if contact.user == current_user -%>
+          <tr>
+            <td><%= link_to contact.first_name + ' ' + contact.last_name , contact %></td>
+            <td><%= contact.email %></td>
+            <td><%= contact.phone %></td>
+            <td><%= contact.twitter %></td>
+    <!--         <td><%= contact.user_id %></td> -->
+    <!--         <td><%= link_to 'Edit', edit_contact_path(contact) %></td> -->
+    <!--         <td><%= link_to 'Delete', contact, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
+          </tr>
+          <% end -%>
+        <% end -%>
+      </tbody>
+    </table>
+  </div>
+</div>
 
 <br>
 
 <%= link_to 'New Contact', new_contact_path, class: "btn btn-secondary" %>
+

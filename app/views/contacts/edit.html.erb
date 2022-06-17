@@ -1,7 +1,11 @@
-<h1>Editing Contact</h1>
-<br/>
-
-<%= render 'form', contact: @contact %>
+<div class="card">
+  <div class="card-header">
+    <h4>Edit Contact</h4>
+  </div>
+  <div class="card-body">
+    <%= render 'form', contact: @contact %>
+  </div>
+</div>
 
 <br/>
 <%= link_to 'Show', @contact, class: "btn btn-secondary"%>
